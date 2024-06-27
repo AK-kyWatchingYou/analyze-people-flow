@@ -1,0 +1,12 @@
+services:
+  python:
+    container_name: python
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./python:/app
+      - ./2021:/app/2021
+      - ./2022:/app/2022
+      - ./2023:/app/2023
+    tty: true
