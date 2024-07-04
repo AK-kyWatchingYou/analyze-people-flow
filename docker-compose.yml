@@ -6,7 +6,5 @@ services:
       dockerfile: ./Dockerfile
     volumes:
       - ./python:/app
-      - ./2021:/app/2021
-      - ./2022:/app/2022
-      - ./2023:/app/2023
+      - ./data:/data
     tty: true
