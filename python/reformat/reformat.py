@@ -14,9 +14,9 @@ class Reformat:
         #追記してください
 
         #[lat1,lat2,lng1,lng2] lat1<latitude<lat2 lng1<longitude<lng2
-        self.latlng = []
+        self.latlng = [[40,41,141,142],[40,41,141,142]]
         #出力ファイル名を定義
-        self.outputName = []
+        self.outputName = ['kankouti1.csv','kankouti2.csv']
     
     def allFilename(self,dirPath):
         li = []
@@ -63,6 +63,6 @@ class Reformat:
             self.dfList[i] = pd.concat([self.dfList[i], qf],ignore_index=True)
 
 #シャープを外すと実行される
-#reformat = Reformat()
-#reformat.loopLoadcsv()
-#reformat.save()
+reformat = Reformat()
+reformat.loopLoadcsv()
+reformat.save()
